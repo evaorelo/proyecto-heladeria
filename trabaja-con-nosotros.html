@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con nosotros - Mi Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                <li><a href="productos-servicios.html">Productos y Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+        <h1>¡Trabaja con nosotros!</h1>
+            <form class="formulario-trabajo">
+                
+                <fieldset class="datos-personales">
+                <legend>Datos Personales</legend>
+                
+                <div class="fieldset-container">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div>
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </div>
+                    <div>
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" name="dni" required>
+                    </div>
+            
+                    <div>
+                        <label for="sexo">Sexo:</label>
+                        <input type="text" id="sexo" name="sexo" required>
+                    </div>
+                    <div>
+                        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    </div>
+                    <div>
+                        <label for="ciudad">Ciudad:</label>
+                        <input type="text" id="ciudad" name="ciudad" required>
+                    </div>
+                    <div>
+                        <label for="nacionalidad">Nacionalidad:</label>
+                        <input type="text" id="nacionalidad" name="nacionalidad" required>
+                    </div>
+                    <div>
+                        <label for="codigo_postal">Código Postal:</label>
+                        <input type="text" id="codigo_postal" name="codigo_postal" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-secciones">
+                <fieldset class="formacion">
+            <legend>Formación</legend>
+            <div>
+            <label for="titulacion">Titulación:<input type="text" id="titulacion" name="titulacion" required></label>
+            <label for="inicio">Año de Inicio:<input type="number" id="inicio" name="inicio" min="1900" max="2024" required></label>
+            <label for="fin">Año de Finalización:<input type="number" id="fin" name="fin" min="1900" max="2024" required></label>
+        </div>
+        </fieldset>
+        <fieldset class="idiomas">
+            <legend>Idiomas</legend>
+            <div><label for="idioma">Idioma:<input type="text" id="idioma" name="idioma" required></label>
+            <div class="idiomas-container"></div>
+            <label>Hablado:</label>
+            <select name="hablado">
+                <option value="Excelente">Excelente</option>
+                <option value="Bien">Bien</option>
+                <option value="Regular">Regular</option>
+                <option value="Nada">Nada</option>
+            </select>
+
+            <label>Leído:</label>
+            <select name="leido">
+                <option value="Excelente">Excelente</option>
+                <option value="Bien">Bien</option>
+                <option value="Regular">Regular</option>
+                <option value="Nada">Nada</option>
+            </select>
+
+            <label>Escrito:</label>
+            <select name="escrito">
+                <option value="Excelente">Excelente</option>
+                <option value="Bien">Bien</option>
+                <option value="Regular">Regular</option>
+                <option value="Nada">Nada</option>
+            </select>
+            
+        </div>
+        
+        </fieldset>
+       <div class="boton-container">
+        <button type="submit">Enviar</button>
+       </div>
+          </form>
+    </main>
+
+    <footer>
+        <p>© 2024 DOLC&SALATO - Síguenos en redes sociales</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/dolc.salato?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                target="_blank"><img src="Recursos/logo_instagram.png" alt="Instagram" width="30px">
+                </a>
+                <a href="https://www.facebook.com/egelato.heladeria/?locale=es_ES" 
+                target="_blank"><img src="Recursos/logo_facebook.png" alt="Instagram" width="60px">
+                </a>
+            </div>
+    </footer>
+</body>
+</html>

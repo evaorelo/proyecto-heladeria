@@ -1,0 +1,408 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #ebb280;
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    text-align: center;
+}
+h1,h2,h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: #333;  
+    text-align: center;
+}
+
+
+.productos {
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productos td {
+    padding: 15px;
+    vertical-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ebb280; /* Bordes visibles */
+    border-radius: 10px;
+    padding: 0;
+    
+}
+
+/* Alternar colores en filas */
+.productos tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color gris claro */
+}
+
+.productos tr:nth-child(odd) {
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+/* Estilos para imágenes */
+.productos .image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los cuadros de texto */
+.texto-producto {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebb2805b;
+    border-radius: 10px;
+    border: 1px solid #ebb280;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Separación entre filas */
+.productos tr {
+    height: 220px;
+}
+
+/*Imagen de los productos*/
+.image{
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+}
+/* Estilos generales del formulario */
+form {
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Estilización del fieldset */
+fieldset {
+    border: 2px solid #ebb2806e; 
+    padding: 5px;
+    border-radius: 8px;
+    
+}
+
+fieldset select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ebb280;
+    border-radius: 5px;
+    background: white;
+    font-size: 1em;
+    color: #333;
+    appearance: none; /* Elimina el diseño predeterminado del navegador */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Icono de flecha personalizado para los select */
+fieldset select:focus {
+    border-color: #ebb280;
+    outline: none;
+    box-shadow: 0 0 5px #ffffff9a;
+}
+
+/* Efecto hover en los select */
+fieldset select:hover {
+    border: 2px solid #ffffff; 
+    background: #ffffff;
+    border: 2px solid #ebb280;
+}
+/* Contenedor de los campos de datos personales */
+.fieldset-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Cada input ocupará la mitad del ancho */
+.fieldset-container div {
+    flex: 1 1 calc(50% - 10px); /* 50% del ancho menos el espacio entre columnas */
+}
+
+/* Para que los inputs y selects ocupen todo el ancho de su div */
+.fieldset-container input,
+.fieldset-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+
+.formulario-trabajo {
+    width: 90%;
+    max-width: 900px;
+    max-height: 600px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de formación e idiomas */
+.form-secciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre los fieldsets */
+    margin-top: 20px;
+    overflow-y: auto;
+    align-items: flex-start;
+}
+
+/* Estilos de los fieldsets */
+.form-secciones fieldset {
+    padding: 10px; /* Reducimos el padding */
+    max-width: 900px;
+    max-height: 600px;;
+    border-radius: 10px;
+    border: 2px solid #ebb2806e; 
+    background-color: #f9f9f9;
+    overflow-y: auto;
+}
+
+/* Ajuste para las etiquetas y campos */
+.form-secciones label,
+.form-secciones input,
+.form-secciones select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+form div {
+    display: block !important;
+}
+/* Para pantallas pequeñas, que los campos se pongan en una sola columna */
+@media (max-width: 600px) {
+    .fieldset-container div {
+        flex: 1 1 100%;
+    }
+    .productos td {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .productos .image, .texto-producto {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+}
+/* Estilo del título dentro del fieldset */
+legend {
+    font-weight: bold;
+    color: #ebb2807e;
+    font-size: 1.2em;
+}
+
+/* Estilos para las etiquetas */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* Estilos para los inputs */
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.boton-container {
+    text-align: center; /* Centra el botón */
+    margin-top: 20px; /* Espacio superior */
+}
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #ebb280;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ebb28065;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: vertical; /* Permite ajustar la altura */
+    min-height: 100px; 
+    max-height: 300px; 
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto cuando el usuario hace clic en el textarea */
+textarea:focus {
+    border-color: #ebb280;
+    outline: none;
+    box-shadow: 0 0 5px #ebb28065;
+}
+.idiomas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+  legend {
+    background-color: rgb(255, 255, 255);
+    color: rgb(39, 39, 39);
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+  
+  input {
+    margin: 5px;
+    border-radius: 15px;
+  }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.full-screen-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;  /* Ocupar todo el ancho de la pantalla */
+    height: 50vh; /* Ocupar todo el alto de la pantalla */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
+    border-radius: 15px;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.video-container video {
+    width: 70%;  /* Ajusta el tamaño del video */
+    max-width: 700px;  
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.image-equipo{
+    display: flex;         /* Coloca los elementos en fila */
+    align-items: center;   /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 20px;             /* Espacio entre elementos */
+    text-align: center;    /* Asegura que el texto esté centrado */
+}
+
+.image-equipo img {
+    width: 220px;  /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 10px;  /* Bordes redondeados opcionales */
+}
+
+/* Estiliza los elementos de contacto */
+.contact-info {
+    display: flex;
+
+    align-items: center;  /* Centrar horizontalmente */
+    justify-content: center;
+    text-align: center;
+    align-items: center;  /* Alinea el icono con el texto */
+    gap: 10px;  /* Espacio entre el icono y el texto */
+    font-size: 1.1em;
+}
+
+/* Asegura que los íconos no se deformen */
+.contact-info img {
+    width: 25px;  /* Ajusta el tamaño del icono */
+    height: auto;
+}
+
+footer {
+    background: #412609;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    bottom: 0;
+    display: flex;
+    gap: 8px;
+}
+
+.social-icons {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+}
+
+.social-icons img {
+    width: 40px;  /* Tamaño del ícono */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Efecto de agrandado al pasar el mouse */
+}
